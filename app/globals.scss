@@ -2,31 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
 @layer components {
-    .icon-size {
-        @apply inline w-5 h-5;
+    // Scrollbar
+    .custom__scrollbar::-webkit-scrollbar {
+        @apply w-2;
+    }
+    .custom__scrollbar::-webkit-scrollbar-track {
+        @apply bg-gray-50;
+    }
+    .custom__scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-gray-300;
     }
 
-    .sidebar-item {
+    // Sidebar Items
+    .siderbar__item {
         @apply relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6;
         &.active {
             @apply border-indigo-500;
         }
     }
-}
 
-.custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
-    cursor: pointer;
-}
-.custom-scrollbar::-webkit-scrollbar-track {
-    background-color: rgba(229, 231, 235, var(--bg-opacity));
-    cursor: pointer;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    cursor: pointer;
-    background-color: #a0aec0;
+    .sidebar__list {
+        hr:first-child {
+            display: none;
+        }
+    }
+
+    .icon__size {
+        @apply inline w-5 h-5;
+    }
+
+    .custom-gradient {
+        @apply w-full h-full absolute left-0 top-0 z-0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(2, 0, 36, 0) 100%);
+    }
 }

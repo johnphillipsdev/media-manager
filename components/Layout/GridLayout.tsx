@@ -1,4 +1,4 @@
-import { SidebarContext } from '@/context/SiderbarContext';
+import { SidebarContext } from '../../context/SiderbarContext';
 import Header from './Header';
 import { useContext } from 'react';
 
