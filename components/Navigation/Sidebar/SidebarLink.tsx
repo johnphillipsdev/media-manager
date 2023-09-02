@@ -33,9 +33,3 @@ export default function SidebarLink({
     </li>
   );
 }
-
-/**
- * TODO
- * - tidy component
- * - tidy useless styles
- */
