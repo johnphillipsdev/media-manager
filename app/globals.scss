@@ -14,7 +14,7 @@
         @apply bg-gray-300;
     }
 
-    // Sidebar Items
+    // Sidebar Classes
     .siderbar__item {
         @apply relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6;
         &.active {
@@ -32,6 +32,7 @@
         @apply inline w-5 h-5;
     }
 
+    // Card Classes
     .custom-gradient {
         @apply w-full h-full absolute left-0 top-0 z-0;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(2, 0, 36, 0) 100%);
