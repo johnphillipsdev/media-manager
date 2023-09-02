@@ -1,12 +1,14 @@
 'use client';
+
+// IMPORTS
 import './globals.scss';
 
-import GridLayout from '../components/Layout/GridLayout';
-import Siderbar from '../components/Layout/Siderbar';
+// CONTEXT
 import SidebarContextProvider from '../context/SiderbarContext';
 
-// Components
-import { useContext, useState } from 'react';
+// COMPONENTS
+import GridLayout from '../components/Layout/GridLayout';
+import Siderbar from '../components/Layout/Siderbar';
 
 export default function RootLayout({ children }) {
   return (

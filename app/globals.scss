@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer components {
-    // Scrollbar
+    // Global
     .custom__scrollbar::-webkit-scrollbar {
         @apply w-2;
     }
@@ -12,6 +12,10 @@
     }
     .custom__scrollbar::-webkit-scrollbar-thumb {
         @apply bg-gray-300;
+    }
+
+    .hide__overflow {
+        overflow: hidden;
     }
 
     // Sidebar Classes

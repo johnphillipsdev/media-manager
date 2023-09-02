@@ -13,7 +13,11 @@ export default function SidebarContextProvider({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
-    document.querySelector('html').classList.toggle('overflow-y-hidden');
+    if (isSidebarOpen || window.innerWidth > 650) {
+      document.querySelector('html').style.overflowY = 'unset';
+    } else {
+      document.querySelector('html').style.overflowY = 'hidden';
+    }
   }, [isSidebarOpen]);
 
   return (
