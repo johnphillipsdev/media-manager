@@ -16,20 +16,24 @@ import {
   RectangleStackIcon,
 } from '@heroicons/react/24/outline';
 import SidebarTitle from '../Navigation/SidebarTitle';
+import { useContext } from 'react';
+import { SidebarContext } from '@/context/SiderbarContext';
 
-export default function Siderbar({ isSidebarClosed, setIsSidebarClosed }) {
+export default function Siderbar() {
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
+
   return (
     <>
       <aside
         className={`${
-          isSidebarClosed ? 'w-16' : 'w-0'
+          isSidebarOpen ? 'w-16' : 'w-0'
         } min-h-screen fixed left-0 overflow-hidden border-r flex flex-col `}
       >
         <div className='grid place-items-center border-b'>
           <button
             className='p-4'
             onClick={() => {
-              setIsSidebarClosed(!isSidebarClosed);
+              setIsSidebarOpen(!isSidebarOpen);
             }}
           >
             <Bars3Icon className='inline w-5 h-5' />
@@ -47,7 +51,7 @@ export default function Siderbar({ isSidebarClosed, setIsSidebarClosed }) {
 
       <aside
         className={`${
-          isSidebarClosed ? 'w-0' : 'w-64'
+          isSidebarOpen ? 'w-0' : 'w-64'
         } min-h-screen fixed left-0 overflow-hidden border-r flex flex-col`}
       >
         <div className='flex justify-between items-center pl-4 border-b'>
@@ -55,7 +59,7 @@ export default function Siderbar({ isSidebarClosed, setIsSidebarClosed }) {
           <button
             className='p-4'
             onClick={() => {
-              setIsSidebarClosed(!isSidebarClosed);
+              setIsSidebarOpen(!isSidebarOpen);
             }}
           >
             <ChevronLeftIcon className='inline w-4 h-4' />
