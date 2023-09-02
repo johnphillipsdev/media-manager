@@ -45,7 +45,7 @@ export default function Siderbar({ isSidebarClosed, setIsSidebarClosed }) {
           </button>
         </div>
 
-        <ul className='overflow-y-scroll bg-red-100 h-screen custom-scrollbar'>
+        <ul className='overflow-y-scroll h-screen custom-scrollbar'>
           <SidebarTitle title={'Menu'} />
 
           <SidebarItem icon={<HomeIcon className='icon-size' />} text={'Dashboard'} />
