@@ -15,7 +15,9 @@ export default function Siderbar(): JSX.Element {
   const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext);
 
   const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+    setIsSidebarOpen((prev) => {
+      return !prev;
+    });
   };
 
   return (
@@ -40,14 +42,14 @@ export default function Siderbar(): JSX.Element {
         } min-h-screen fixed left-0 overflow-hidden border-r flex flex-col`}
       >
         <div className='flex justify-between items-center pl-4 border-b'>
-          <h1>Media Manager</h1>
+          <h1 className='uppercase font-bold'>Media Manager</h1>
           <button
             className='p-4'
             onClick={() => {
               setIsSidebarOpen(!isSidebarOpen);
             }}
           >
-            <ChevronLeftIcon className='inline w-4 h-4' />
+            <ChevronLeftIcon className='inline w-5 h-5' />
           </button>
         </div>
 
@@ -56,10 +58,3 @@ export default function Siderbar(): JSX.Element {
     </>
   );
 }
-
-/**
- * TODO
- * - entire function needs cleaning up
- * - move lists over
- * - hook up links to pages
- */
